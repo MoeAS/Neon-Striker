@@ -1,59 +1,103 @@
-# Jolt
+# 🎮 Neon Striker - FPS Mini Game
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
+A fast-paced first-person shooter built with **Angular**, **Three.js**, and **Jolt Physics**.
 
-## Development server
+![Neon Striker](./public/screenshot.png)
+![Neon Striker](./public/screenshot1.png)
 
-To start a local development server, run:
+## ✨ Features
+
+### 🔫 Weapons (4 types)
+- **Plasma Pistol** - Semi-auto starter (12 rounds)
+- **Assault Rifle** - Full-auto rapid fire (30 rounds)
+- **Scatter Gun** - 8-pellet spread shot (6 shells)
+- **Rail Gun** - High-damage sniper (5 rounds)
+
+### 👾 Enemies (4 types)
+- **Basic Robot** - Balanced stats
+- **Scout** - Fast, low health
+- **Tank** - Slow, heavily armored
+- **Drone** - Flying aerial enemy
+
+### 💊 Power-ups
+Health, Ammo, Speed Boost, Shield, Weapon Pickups
+
+### 🎵 Sound Effects
+Procedurally generated weapon sounds, impacts, pickups
+
+### 📱 Mobile Support
+Touch controls with dual virtual joysticks
+
+### 🌆 Level Themes
+Neon, Industrial, Cyber - with progressive difficulty
+
+## 🎮 Controls
+
+### Desktop
+| Action | Key |
+|--------|-----|
+| Move | W / A / S / D |
+| Look | Mouse |
+| Shoot | Left Click |
+| Jump | Space |
+| Sprint | Shift |
+| Reload | R |
+| Switch Weapon | 1-4 or Scroll |
+| Pause | Escape |
+
+### Mobile
+- Left Joystick - Move
+- Right Joystick - Look
+- FIRE/JUMP buttons
+
+## 🚀 Quick Start
 
 ```bash
-ng serve
+cd neon-striker
+npm install
+npm start
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Open http://localhost:4200
 
-## Code scaffolding
+## 🏗️ Tech Stack
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Angular 21** - Frontend framework
+- **Three.js** - 3D graphics
+- **Jolt Physics** - WASM physics engine
+- **Web Audio API** - Procedural sound
 
-```bash
-ng generate component component-name
+## 📁 Project Structure
+
+```
+src/app/
+├── services/
+│   ├── physics.service.ts    # Jolt Physics
+│   ├── renderer.service.ts   # Three.js
+│   ├── game.service.ts       # Game loop
+│   ├── weapon.service.ts     # Weapons
+│   ├── enemy.service.ts      # Enemy AI
+│   ├── powerup.service.ts    # Power-ups
+│   └── sound.service.ts      # Audio
+├── game/                     # Game UI
+└── menu/                     # Main menu
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 🎯 Gameplay
 
-```bash
-ng generate --help
-```
+1. Spawn in arena center
+2. Enemies attack from edges
+3. Shoot to earn points
+4. Collect power-ups
+5. Every 15 kills = level up
 
-## Building
+## 🔗 Links
 
-To build the project run:
+- [Instagram](https://instagram.com/moe_as7/)
+- [TikTok](https://tiktok.com/@moe_as7)
+- [Portfolio](https://mohamad-abou-salem.web.app/)
+- [Support/Donate](https://buymeacoffee.com/mohamadabousalem)
 
-```bash
-ng build
-```
+## 📝 License
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+MIT
