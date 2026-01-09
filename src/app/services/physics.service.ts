@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import Jolt from 'jolt-physics/wasm';
 
 export interface PhysicsBody {
   id: number;
@@ -23,7 +22,13 @@ export class PhysicsService {
   private readonly LAYER_MOVING = 1;
   
   async initialize(): Promise<void> {
-    this.Jolt = await Jolt({
+    // Dynamic import with variable to bypass build-time resolution completely
+    const joltPath = '/jolt-physics.js';
+    // @ts-ignore
+    const module = await import(/* @vite-ignore */ joltPath);
+    const JoltConstructor = module.default || module;
+
+    this.Jolt = await JoltConstructor({
       locateFile: (path: string) => {
         if (path.endsWith('.wasm')) {
           return 'jolt-physics.wasm.wasm';
