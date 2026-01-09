@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import Jolt from 'jolt-physics/wasm-compat';
+import Jolt from 'jolt-physics/wasm';
 
 export interface PhysicsBody {
   id: number;
@@ -23,7 +23,14 @@ export class PhysicsService {
   private readonly LAYER_MOVING = 1;
   
   async initialize(): Promise<void> {
-    this.Jolt = await Jolt();
+    this.Jolt = await Jolt({
+      locateFile: (path: string) => {
+        if (path.endsWith('.wasm')) {
+          return 'jolt-physics.wasm.wasm';
+        }
+        return path;
+      }
+    });
     
     // Setup collision filtering
     const objectFilter = new this.Jolt.ObjectLayerPairFilterTable(2);
