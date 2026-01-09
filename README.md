@@ -2,6 +2,8 @@
 
 A fast-paced first-person shooter built with **Angular**, **Three.js**, and **Jolt Physics**.
 
+Try it out! https://neon-striker.vercel.app/
+
 ![Neon Striker](./public/screenshot.png)
 ![Neon Striker](./public/screenshot1.png)
 
