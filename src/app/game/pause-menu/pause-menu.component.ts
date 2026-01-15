@@ -356,7 +356,8 @@ export class PauseMenuComponent {
   }
   
   onSupport(): void {
-    window.open('https://buymeacoffee.com', '_blank');
+    // window.open('https://buymeacoffee.com/moeas', '_blank');
+        window.open('https://buymeacoffee.com/moeas', '_blank');
     this.support.emit();
   }
 }

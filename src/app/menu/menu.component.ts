@@ -469,6 +469,7 @@ export class MenuComponent {
   }
   
   openSupport(): void {
-    window.open('https://buymeacoffee.com', '_blank');
+    // window.open('https://buymeacoffee.com/moeas', '_blank');
+    window.open('https://buymeacoffee.com/moeas', '_blank');
   }
 }

@@ -98,7 +98,8 @@ src/app/
 - [Instagram](https://instagram.com/moe_as7/)
 - [TikTok](https://tiktok.com/@moe_as7)
 - [Portfolio](https://mohamad-abou-salem.web.app/)
-- [Support/Donate](https://buymeacoffee.com/mohamadabousalem)
+<!-- - [Support/Donate](https://buymeacoffee.com/moeas) -->
+- [Support/Donate](https://buymeacoffee.com/moeas)
 
 ## 📝 License
 
